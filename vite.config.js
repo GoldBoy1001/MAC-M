@@ -2,7 +2,7 @@ import { defineConfig } from "vite";
 import { resolve } from "path";
 
 export default defineConfig({
-  base: "/", // или /имя-репозитория/ для GitHub Pages
+  base: "/MAC-M", // или /имя-репозитория/ для GitHub Pages
   build: {
     rollupOptions: {
       input: {
