@@ -23,6 +23,18 @@ h1 {
 	letter-spacing: -3px;
 }
 
+
+ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+a {
+	color: #222222;
+	text-decoration: none;
+}
+
 h1 {
 	font-size: clamp(1.5rem, 0.5rem + 5vw, 6.25rem);
 }
@@ -34,6 +46,7 @@ h2 {
 // =======================================================
 $width: 1840px;
 
+$color: #222222;
 $orange: #FF8000;
 $bgBlue: #0066B3;
 
@@ -44,6 +57,7 @@ $bgBlue: #0066B3;
 %grid {
 	display: grid;
 	grid-template: auto / 1fr minmax(auto, $width) 1fr;
+	padding: 0px 40px;
 }
 
 %btnOrange {
@@ -78,6 +92,19 @@ body {
 		"main"
 		"footer";
 }
+
+@media (max-width: 1900px) {
+	.active-menu {
+		transition: .5s;
+		background-color: hsl(0, 0%, 0%, 0.6);
+
+	}
+
+	body .active-menu {
+		overflow-y: hidden;
+	}
+}
+
 
 @import './scss/header.scss';
 @import './scss/main.scss';
