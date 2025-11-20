@@ -1,0 +1,84 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+@import "./scss/fonts.scss";
+
+
+:root {
+	font-family: "Inter", sans-serif;
+	font-optical-sizing: auto;
+	font-weight: 400;
+	font-style: normal;
+	font-size: 16px;
+	letter-spacing: 0;
+	line-height: 110%;
+	color: #222222;
+}
+
+
+h2,
+h1 {
+	font-family: "HSE Sans", sans-serif;
+	margin: 0;
+	font-weight: 600;
+	line-height: 110%;
+	letter-spacing: -3px;
+}
+
+h1 {
+	font-size: clamp(1.5rem, 0.5rem + 5vw, 6.25rem);
+}
+
+h2 {
+	font-size: clamp(1.5rem, 0.6974rem + 4.0132vw, 5.3125rem);
+}
+
+// =======================================================
+$width: 1840px;
+
+$orange: #FF8000;
+$bgBlue: #0066B3;
+
+%text {
+	font-size: clamp(0.875rem, 0.7434rem + 0.6579vw, 1.5rem);
+}
+
+%grid {
+	display: grid;
+	grid-template: auto / 1fr minmax(auto, $width) 1fr;
+}
+
+%btnOrange {
+
+	padding: 27px 40px;
+	cursor: pointer;
+	transition: 0.3s;
+	color: #ffffff;
+	background-color: $orange;
+
+	@media (hover: hover) {
+		&:hover {
+			background-color: #ffffff;
+			outline: 1px solid #111111;
+			color: #111111;
+		}
+	}
+}
+
+// =======================================================
+
+body {
+	font-size: 24px;
+}
+
+.wrapper {
+	min-height: 100vh;
+	display: grid;
+	grid-template: minmax(144px, auto) 1fr minmax(523px, auto) / 1fr;
+	grid-template-areas:
+		"header"
+		"main"
+		"footer";
+}
+
+@import './scss/header.scss';
+@import './scss/main.scss';
+@import './scss/footer.scss';
