@@ -2,7 +2,7 @@
 	grid-area: header;
 	background-color: #ffffff;
 	@extend %grid;
-	padding: 40px 40px;
+	padding: clamp(0.625rem, 0.2303rem + 1.9737vw, 2.5rem) clamp(1.25rem, 0.9868rem + 1.3158vw, 2.5rem);
 	font-size: clamp(0.875rem, 0.7434rem + 0.6579vw, 1.5rem);
 	position: relative;
 
@@ -14,9 +14,9 @@
 		overflow: hidden;
 	}
 
-	&__logo {
-		width: clamp(8.4375rem, 6.9243rem + 7.5658vw, 15.625rem);
-		height: clamp(2.1875rem, 1.7928rem + 1.9737vw, 4.0625rem);
+	&__logo img {
+		// width: clamp(8.4375rem, 6.9243rem + 7.5658vw, 15.625rem);
+		max-width: clamp(8.4375rem, 6.9243rem + 7.5658vw, 15.625rem);
 
 	}
 
@@ -44,26 +44,39 @@
 	display: none;
 	flex-direction: column;
 	justify-content: space-between;
-	width: clamp(2.5rem, 2.1053rem + 1.9737vw, 4.375rem);
-	height: clamp(1rem, 0.9474rem + 0.2632vw, 1.25rem);
+	width: 70px;
+	height: 20px;
 	cursor: pointer;
 	border: none;
 	background: transparent;
 	padding: 0;
 	z-index: 1001;
 
+	@media (max-width: 768px) {
+		width: 40px;
+		height: 20px;
+	}
 
 	span {
 		display: block;
 		height: 3px;
-		width: 40px;
+		width: 70px;
 		background-color: $bgBlue; // твой цвет полосок
 		border-radius: 2px;
 		transition: all 0.3s ease;
+
+		@media (max-width: 768px) {
+			width: 40px;
+			height: 2px;
+		}
 	}
 
 	&.active span:nth-child(1) {
 		transform: rotate(45deg) translateY(12px);
+
+		@media (max-width: 768px) {
+			transform: rotate(45deg) translateY(13px);
+		}
 	}
 
 	&.active span:nth-child(2) {
@@ -72,6 +85,17 @@
 
 	&.active span:nth-child(3) {
 		transform: rotate(-45deg) translateY(-12px);
+
+		@media (max-width: 768px) {
+			transform: rotate(-45deg) translateY(-13px);
+		}
+	}
+
+	&.active {
+		@media (max-width: 768px) {
+			margin-left: 4px;
+		}
+
 	}
 
 	@media (max-width: 1900px) {
@@ -91,11 +115,11 @@
 		position: absolute;
 		top: 99%;
 		left: 0;
-		width: 100%;
+		width: calc(100% - (clamp(1.25rem, 0.9868rem + 1.3158vw, 2.5rem) * 2));
 
 		flex-direction: column;
 		transform: scale(0);
-		padding: 20px 40px;
+		padding: 20px clamp(1.25rem, 0.9868rem + 1.3158vw, 2.5rem);
 		transition: .1s;
 
 		&.active {
@@ -114,6 +138,8 @@
 			row-gap: 40px;
 		}
 	}
+
+
 }
 
 
@@ -168,6 +194,7 @@
 			width: 100%;
 			margin-left: 0;
 			padding: 13px 0px;
+
 		}
 	}
 }

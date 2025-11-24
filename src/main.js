@@ -5,4 +5,7 @@ import "./style.scss";
 import { Burger } from "./js/burger";
 
 // ===================================================================
-Burger();
+
+document.addEventListener("DOMContentLoaded", () => {
+  Burger();
+});

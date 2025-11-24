@@ -54,6 +54,10 @@ $bgBlue: #0066B3;
 	font-size: clamp(0.875rem, 0.7434rem + 0.6579vw, 1.5rem);
 }
 
+%padding {
+	padding: clamp(0.625rem, 0.2303rem + 1.9737vw, 2.5rem) clamp(1.25rem, 0.9868rem + 1.3158vw, 2.5rem);
+}
+
 %grid {
 	display: grid;
 	grid-template: auto / 1fr minmax(auto, $width) 1fr;
@@ -86,7 +90,7 @@ body {
 .wrapper {
 	min-height: 100vh;
 	display: grid;
-	grid-template: minmax(144px, auto) 1fr minmax(523px, auto) / 1fr;
+	grid-template: minmax(clamp(4rem, 2.9474rem + 5.2632vw, 9rem), auto) 1fr minmax(523px, auto) / 1fr;
 	grid-template-areas:
 		"header"
 		"main"
