@@ -23,6 +23,16 @@ h1 {
 	letter-spacing: -3px;
 }
 
+@media (max-width: 768px) {
+
+	h2,
+	h1 {
+		line-height: 100%;
+		letter-spacing: 0px;
+	}
+}
+
+
 
 ul {
 	list-style: none;
@@ -38,6 +48,7 @@ a {
 h1 {
 	font-size: clamp(1.5rem, 0.5rem + 5vw, 6.25rem);
 }
+
 
 h2 {
 	font-size: clamp(1.5rem, 0.6974rem + 4.0132vw, 5.3125rem);
@@ -101,11 +112,11 @@ body {
 	.active-menu {
 		transition: .5s;
 		background-color: hsl(0, 0%, 0%, 0.6);
-
+		z-index: 1001;
 	}
 
-	body .active-menu {
-		overflow-y: hidden;
+	body.active-menu {
+		overflow: hidden;
 	}
 }
 

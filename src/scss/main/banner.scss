@@ -1,0 +1,112 @@
+.banner {
+	position: relative;
+	width: calc(100% - (clamp(1.25rem, 0.9868rem + 1.3158vw, 2.5rem) * 2));
+
+	height: clamp(30.25rem, 24.3026rem + 29.7368vw, 58.5rem);
+	display: flex;
+	align-items: end;
+	background: url("../../../public/images/banner-home.jpg") center / contain no-repeat;
+	color: #ffffff;
+	margin: 0px clamp(1.25rem, 0.9868rem + 1.3158vw, 2.5rem);
+	overflow: hidden;
+
+	/* затемнение для читаемости текста */
+	// &::before {
+	// 	content: "";
+	// 	position: absolute;
+	// 	inset: 0;
+	// 	background: rgba(0, 0, 0, 0.2);
+	// 	z-index: 1;
+	// }
+	@media (max-width: 1900px) {
+		background: url("../../../public/images/banner-home.jpg") center / cover no-repeat;
+		border-top-left-radius: 100px;
+		border-bottom-right-radius: 100px;
+		overflow: hidden;
+	}
+
+	@media (max-width: 768px) {
+		height: clamp(30.25rem, 8.1071rem + 110.7143vw, 61.25rem);
+		background: url("../../../public/images/banner-home.jpg") 28% 0 / auto 100% no-repeat !important;
+
+	}
+
+	@media (max-width: 640px) {
+		height: clamp(30.25rem, 8.1071rem + 110.7143vw, 61.25rem);
+		background: url("../../../public/images/banner-home.jpg") 30% 0 / auto 100% no-repeat !important;
+
+	}
+
+	@media (max-width: 640px) {
+		background: url("../../../public/images/banner-home.jpg") 30% 0 / auto 100% no-repeat;
+		border-radius: 20px;
+		overflow: hidden;
+	}
+
+	&__content {
+		padding: clamp(1.875rem, 1.2171rem + 3.2895vw, 5rem) clamp(0.9375rem, 0.6086rem + 1.6447vw, 2.5rem);
+	}
+
+	&__title {}
+
+	&__buttons {
+		display: flex;
+		gap: 20px;
+		padding-top: 40px;
+
+		@media (max-width: 640px) {
+			flex-direction: column;
+			width: 100%;
+			gap: 10px;
+			padding-top: 30px;
+		}
+	}
+
+	&__btn {
+		border-radius: 50px;
+		padding: clamp(0.5625rem, 0.352rem + 1.0526vw, 1.5625rem) 40px;
+		width: 445px;
+		font-weight: 500;
+		text-align: center;
+		transition: 0.3s;
+		cursor: pointer;
+		@extend %text;
+
+
+		@media (max-width: 1090px) {
+			width: 250px;
+		}
+
+		@media (max-width: 640px) {
+			width: 100% !important;
+		}
+
+	}
+
+	&__btn--primary {
+		background: $orange;
+		color: #ffffff;
+		border: 1px solid $orange;
+
+		@media (hover: hover) {
+			&:hover {
+				background: #fff;
+				color: $orange;
+			}
+		}
+	}
+
+	&__btn--outline {
+		background: transparent;
+		border: 1px solid $orange;
+		color: $orange;
+		background: #ffffff;
+
+		@media (hover: hover) {
+			&:hover {
+				background: $orange;
+				color: #ffffff;
+			}
+		}
+	}
+}
