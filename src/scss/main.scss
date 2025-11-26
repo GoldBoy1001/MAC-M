@@ -1,6 +1,8 @@
 .main {
-  grid-area: main;
+	grid-area: main;
 }
 
 @import "./main/banner.scss";
 @import "./main/features.scss";
+@import "./main/slider-index";
+@import "./main/about-index.scss";

@@ -1,0 +1,148 @@
+.types-of-parking {
+	@extend %grid;
+	@extend %paddingSection;
+	position: relative;
+
+	@media (max-width: 1024px) {
+		margin-top: clamp(5.625rem, -0.465rem + 20.2578vw, 12.5rem);
+	}
+
+	@media (max-width: 480px) {
+		margin-top: 0px;
+	}
+
+	&__body {
+		grid-column: 2/3;
+		overflow: hidden;
+
+
+	}
+
+}
+
+
+
+.swiper-index {
+	max-width: 80%;
+	height: clamp(20.375rem, 16.9671rem + 17.0395vw, 36.5625rem);
+
+	@media (max-width: 480px) {
+		max-width: 100%;
+	}
+}
+
+.swiper-wrapper-index {}
+
+
+.swiper-slide-index {}
+
+.swiper-pagination {}
+
+.swiper-button-prev {}
+
+.swiper-button-next {}
+
+.swiper-scrollbar {}
+
+.card-slide-index {
+	display: flex;
+	flex-direction: column;
+	padding: 15px;
+	height: calc(100% - (15px * 2));
+	overflow: hidden;
+	text-align: center;
+	justify-content: space-between;
+
+	@media (max-width: 480px) {
+		padding: 0px;
+	}
+}
+
+.card-slide-body {
+	margin-bottom: 30px;
+	width: 100%;
+	height: clamp(13.5rem, 11.2632rem + 11.1842vw, 24.125rem);
+	position: relative;
+
+	img {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+	}
+}
+
+.card-index-text {
+	@extend %textBig;
+}
+
+.card-index-btn {
+	border-radius: 50px;
+	padding: clamp(0.625rem, 0.5461rem + 0.3947vw, 1rem) 32px;
+	max-width: 100%;
+	font-weight: 500;
+	text-align: center;
+	transition: 0.3s;
+	cursor: pointer;
+	@extend %text;
+	background: $orange;
+	color: #ffffff;
+	border: 1px solid $orange;
+
+	@media (hover: hover) {
+		&:hover {
+			background: #fff;
+			color: $orange;
+		}
+	}
+}
+
+/* точнее селектор */
+.swiper.swiper-index.swiper-button-next-index {}
+
+.swiper-button-next.swiper-button-next-index,
+.swiper-button-prev.swiper-button-prev-index {
+	img {
+		width: clamp(2.5rem, 2.2368rem + 1.3158vw, 3.75rem);
+	}
+
+	svg {
+		display: none;
+	}
+}
+
+.swiper-navigation-icon {}
+
+.swiper.swiper-index .swiper-button-prev-index {}
+
+.swiper-button-prev.swiper-button-prev-index {
+	// left: clamp(1.25rem, 0.9868rem + 1.3158vw, 2.5rem);
+	grid-column: 2/3;
+}
+
+
+.swiper-button-next.swiper-button-next-index {
+	// right: clamp(1.25rem, 0.9868rem + 1.3158vw, 2.5rem);
+	grid-column: 2/3;
+}
+
+@media (max-width: 480px) {
+
+	.swiper-button-prev.swiper-button-prev-index,
+	.swiper-button-next.swiper-button-next-index {
+		top: var(--swiper-navigation-top-offset, 93%);
+		margin-top: calc(0px - (var(--swiper-navigation-size) / 2));
+
+	}
+
+	.swiper-button-prev.swiper-button-prev-index {
+		left: 23%;
+
+	}
+
+	.swiper-button-next.swiper-button-next-index {
+		right: 23%;
+
+	}
+}

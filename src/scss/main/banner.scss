@@ -9,6 +9,8 @@
 	color: #ffffff;
 	margin: 0px clamp(1.25rem, 0.9868rem + 1.3158vw, 2.5rem);
 	overflow: hidden;
+	max-width: 1840px;
+	margin: 0 auto;
 
 	/* затемнение для читаемости текста */
 	// &::before {

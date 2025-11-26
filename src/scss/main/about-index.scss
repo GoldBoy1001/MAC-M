@@ -1,0 +1,37 @@
+.about-index {
+	@extend %grid;
+	@extend %paddingSection;
+
+	@media (max-width: 480px) {
+		margin-top: 40px;
+	}
+
+	&__body {
+		grid-column: 2/3;
+	}
+
+	&__texts {
+		display: flex;
+		column-gap: 40px;
+		line-height: 110%;
+		@extend %text;
+
+		@media (max-width: 1024px) {
+			flex-direction: column;
+			row-gap: 30px;
+		}
+	}
+
+	&__text {
+		flex: 1 1 50%;
+
+		a {
+			color: $bgBlue;
+		}
+
+		span {
+			display: inline-block;
+			margin-top: 30px;
+		}
+	}
+}
