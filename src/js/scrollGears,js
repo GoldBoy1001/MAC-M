@@ -1,0 +1,15 @@
+export function ScrollGears() {
+  const gears = document.querySelectorAll(".js-gear");
+
+  window.addEventListener("scroll", () => {
+    const scroll = window.scrollY;
+
+    gears.forEach(gear => {
+      const speed = 0.3;
+      const rotation = scroll * speed;
+
+      gear.style.transform = `rotate(${rotation}deg)`;
+      gear.style.transformOrigin = "50% 50%";
+    });
+  });
+}

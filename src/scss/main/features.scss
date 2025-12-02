@@ -2,6 +2,7 @@
 	@extend %grid;
 	position: relative;
 	@extend %paddingSection;
+	margin-top: clamp(3.125rem, 2.4671rem + 3.2895vw, 6.25rem);
 
 	&__body {
 		grid-column: 2/3;

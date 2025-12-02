@@ -6,12 +6,18 @@ import "normalize.css";
 import "./style.scss";
 
 import { Burger } from "./js/burger";
+import { ScrollGears } from "./js/scrollGears,js";
 
 // ===================================================================
 
 document.addEventListener("DOMContentLoaded", () => {
   Burger();
-
+  window.addEventListener("scroll", () => {
+    const gear = document.getElementById("gear-group");
+    const rotation = window.scrollY * 0.3; // скорость вращения
+    gear.style.transform = `rotate(${rotation}deg)`;
+  });
+  ScrollGears();
   const swiper = new Swiper(".swiper", {
     loop: true,
     slidesPerView: 3, // показывать 3 слайда
@@ -37,10 +43,5 @@ document.addEventListener("DOMContentLoaded", () => {
         spaceBetween: 40,
       },
     },
-  });
-  window.addEventListener("scroll", () => {
-    const gear = document.getElementById("gear-group");
-    const rotation = window.scrollY * 0.3; // скорость вращения
-    gear.style.transform = `rotate(${rotation}deg)`;
   });
 });

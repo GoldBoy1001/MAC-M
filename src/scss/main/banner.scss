@@ -88,7 +88,7 @@
 	&__btn--primary {
 		background: $orange;
 		color: #ffffff;
-		border: 1px solid $orange;
+		border: 2px solid $orange;
 
 		@media (hover: hover) {
 			&:hover {
@@ -100,7 +100,7 @@
 
 	&__btn--outline {
 		background: transparent;
-		border: 1px solid $orange;
+		border: 2px solid $orange;
 		color: $orange;
 		background: #ffffff;
 
