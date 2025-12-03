@@ -1,0 +1,113 @@
+.order-project {
+  display: grid;
+  grid-template: auto / 1fr minmax(auto, 1220px) 1fr;
+  padding: 0px clamp(1.25rem, 0.9868rem + 1.3158vw, 2.5rem);
+  box-sizing: border-box;
+  position: relative;
+  margin-top: -180px;
+  z-index: 300;
+}
+
+.order-project__svg {
+  position: absolute;
+  bottom: -101px;
+  left: 0;
+  width: 100%;
+  height: 205px;
+  z-index: 102;
+}
+
+.order-project__body {
+  background-color: #ffffff;
+  position: relative;
+  grid-column: 2/3;
+  box-shadow: 20px 20px 200px rgba(16, 91, 147, 0.25),
+    0px -20px 200px rgba(16, 91, 147, 0.25);
+  border-radius: 30px;
+  padding: clamp(0.9375rem, 0.6086rem + 1.6447vw, 2.5rem);
+  z-index: 101;
+}
+
+.order-project__card {
+}
+.card-order-project {
+  display: flex;
+  column-gap: 40px;
+  justify-content: space-between;
+}
+.card-order-project__left {
+  display: flex;
+  flex-direction: column;
+  max-width: 589px;
+}
+.card-order-project__right {
+  max-width: 451px;
+  img {
+    width: 100%;
+    height: 100%;
+  }
+}
+.card-order-project__left-title {
+  margin-bottom: clamp(1.25rem, 1.1184rem + 0.6579vw, 1.875rem);
+}
+.card-order-project__left-text {
+  @extend %text;
+  line-height: 110%;
+  flex: 1 1 auto;
+  max-width: 540px;
+  span {
+    display: inline-block;
+    margin-top: 20px;
+  }
+}
+.card-order-project__left-buttons {
+  margin-top: 20px;
+  display: flex;
+  column-gap: 20px;
+}
+.card-order-project__left-btn {
+}
+.card-order-project__left-btn-1 {
+  background: $bgBlue;
+  color: #ffffff;
+  border: 2px solid $bgBlue;
+  border-radius: 50px;
+  padding: 19px 66px;
+  cursor: pointer;
+  transition: 0.3s;
+
+  @media (hover: hover) {
+    &:hover {
+      color: $bgBlue;
+      background: #ffffff;
+    }
+  }
+
+  @media (max-width: 440px) {
+    width: 100%;
+    margin-left: 0;
+    padding: 13px 0px;
+  }
+}
+.card-order-project__left-btn-2 {
+  color: $bgBlue;
+  border: 2px solid $bgBlue;
+  border-radius: 50px;
+  padding: 19px 52px;
+  transition: 0.3s;
+
+  @media (hover: hover) {
+    &:hover {
+      color: #ffffff;
+      background: $bgBlue;
+    }
+  }
+
+  @media (max-width: 440px) {
+    display: inline-block;
+    width: 100%;
+    padding: 13px 0px;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+}

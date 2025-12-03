@@ -1,0 +1,66 @@
+.bim {
+  // .bim__body
+  @extend %grid;
+  box-sizing: border-box;
+  @extend %paddingSection;
+  margin-top: clamp(3.125rem, 2.4671rem + 3.2895vw, 6.25rem);
+  &__body {
+    grid-column: 2/3;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  // .bim__left
+
+  &__left {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    max-width: 890px;
+  }
+
+  // .bim__right
+
+  &__right {
+    max-width: 910px;
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+}
+.left-bim {
+  // .left-bim__texts
+
+  &__texts {
+    flex: 1 1 auto;
+    @extend %text;
+  }
+
+  // .left-bim__text
+
+  &__text + &__text {
+    margin-top: clamp(1.25rem, 0.9868rem + 1.3158vw, 2.5rem);
+  }
+
+  // .left-bim__btn
+
+  &__btn {
+    background-color: $orange;
+    color: #ffffff;
+    font-size: clamp(0.75rem, 0.5921rem + 0.7895vw, 1.5rem);
+    padding: 19px 235px;
+    border-radius: 50px;
+    background: $orange;
+    border: 2px solid $orange;
+    font-weight: 500;
+    transition: 0.3s;
+    align-self: flex-start;
+    @media (hover: hover) {
+      &:hover {
+        background: #fff;
+        color: $orange;
+      }
+    }
+  }
+}
