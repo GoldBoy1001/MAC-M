@@ -1,5 +1,8 @@
-import Swiper from "swiper/bundle";
-import "swiper/css/bundle";
+import Swiper from "swiper";
+import { Navigation } from "swiper/modules";
+
+import "swiper/css";
+import "swiper/css/navigation";
 
 import "normalize.css";
 
@@ -18,30 +21,35 @@ document.addEventListener("DOMContentLoaded", () => {
     gear.style.transform = `rotate(${rotation}deg)`;
   });
   ScrollGears();
-  const swiper = new Swiper(".swiper", {
+  const swiperIndex = new Swiper(".swiper-index", {
+    modules: [Navigation],
     loop: true,
-    slidesPerView: 3, // показывать 3 слайда
-    spaceBetween: 40, // расстояние между слайдами в пикселях
-
-    // Navigation arrows
+    slidesPerView: 3,
+    spaceBetween: 40,
     navigation: {
       nextEl: ".swiper-button-next-index",
       prevEl: ".swiper-button-prev-index",
     },
-    // Можно добавить адаптив
     breakpoints: {
-      320: {
-        slidesPerView: 1,
-        spaceBetween: 10,
-      },
-      1024: {
-        slidesPerView: 2,
-        spaceBetween: 2,
-      },
-      1740: {
-        slidesPerView: 3,
-        spaceBetween: 40,
-      },
+      320: { slidesPerView: 1, spaceBetween: 10 },
+      1024: { slidesPerView: 2, spaceBetween: 2 },
+      1740: { slidesPerView: 3, spaceBetween: 40 },
+    },
+  });
+
+  const swiperPartners = new Swiper(".swiper-our-partners-index", {
+    modules: [Navigation],
+    loop: true,
+    slidesPerView: 3,
+    spaceBetween: 40,
+    navigation: {
+      nextEl: ".our-partners-next-index",
+      prevEl: ".our-partners-prev-index",
+    },
+    breakpoints: {
+      320: { slidesPerView: 1, spaceBetween: 10 },
+      1024: { slidesPerView: 2, spaceBetween: 20 },
+      1740: { slidesPerView: 3, spaceBetween: 40 },
     },
   });
 });
