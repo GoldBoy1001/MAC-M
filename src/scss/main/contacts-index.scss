@@ -100,7 +100,13 @@
 	left: calc(100% - 80px);
 	width: 232px;
 	height: 100%;
-	transform: translate(-82%, -14%);
+	// transform: translate(-82%, -14%);
+	transform: translate(clamp(-193px,
+				calc(-73px + (-120 * (100vw - 1024px) / 816)),
+				-73px),
+			clamp(-135px,
+				calc(-112px + (-23 * (100vw - 1024px) / 816)),
+				-112px));
 	max-width: 232px;
 	z-index: 20;
 
