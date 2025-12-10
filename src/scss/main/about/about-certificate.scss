@@ -1,0 +1,22 @@
+.about-certificate {
+	@extend %grid;
+	@extend %paddingSection;
+
+	&__body {
+		grid-column: 2/3;
+		display: grid;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+
+	&__text {
+		@extend %text;
+	}
+
+	&__btn {
+
+		@extend %btnOrange;
+
+	}
+}

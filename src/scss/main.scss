@@ -2,6 +2,8 @@
 	grid-area: main;
 }
 
+// ======================  Home ==============================
+
 @import "./main/banner.scss";
 @import "./main/features.scss";
 @import "./main/slider-index";
@@ -12,3 +14,8 @@
 @import "./main/news-index.scss";
 @import "./main/our-partners-index.scss";
 @import "./main/contacts-index.scss";
+
+// ======================  About ==============================
+@import "./main/about/about-banner.scss";
+@import "./main/about/about-type.scss";
+@import "./main/about/about-certificate.scss";

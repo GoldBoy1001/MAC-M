@@ -1,0 +1,82 @@
+.about-banner {
+	@extend %grid;
+	padding: clamp(3.625rem, 2.8092rem + 4.0789vw, 7.5rem) clamp(1.25rem, 0.9868rem + 1.3158vw, 2.5rem) 0px clamp(1.25rem, 0.9868rem + 1.3158vw, 2.5rem);
+	height: 768px;
+	box-sizing: border-box;
+	background: url("../../../../public/images/Banner-about.jpg") 0 0 / 100% 100% no-repeat;
+
+	@media (max-width: 1440px) {
+		height: 868px;
+	}
+
+	@media (max-width: 1240px) {
+		height: 1037px;
+		background: url("../../../../public/images/Banner-about.jpg") 50% 0 / cover no-repeat;
+	}
+
+	@media (max-width: 992px) {
+		background: url("../../../../public/images/Banner-about-mobile.jpg") 0 0 / 100% 100% no-repeat !important;
+	}
+
+	@media (max-width: 768px) {
+		height: clamp(30.1875rem, 5.4554rem + 123.6607vw, 64.8125rem) !important;
+	}
+
+	&__body {
+		grid-column: 2/3;
+		position: relative;
+		z-index: 10;
+		color: #ffffff;
+		display: flex;
+
+		@media (max-width: 1240px) {
+			flex-direction: column;
+			row-gap: 30px;
+		}
+
+		h1 {
+			font-size: clamp(1.5rem, 0.6974rem + 4.0132vw, 5.3125rem);
+			flex: 1 1 48%;
+			text-align: center;
+			padding-left: 80px;
+
+			@media (max-width: 1240px) {
+				flex: 1 1 100%;
+				text-align: left;
+				padding-left: 0px;
+			}
+		}
+	}
+
+	&__texts {
+		flex: 1 1 52%;
+		padding-top: 10px;
+
+		@media (max-width: 1240px) {
+			flex: 1 0 100%;
+			padding-top: 0px;
+		}
+
+		@media (max-width: 480px) {
+			display: none;
+		}
+	}
+
+	&__text {
+		@extend %text;
+
+		a {
+			color: $orange;
+		}
+	}
+
+	&__text+&__text {
+		margin-top: 30px;
+
+		@media (max-width: 1240px) {
+			margin-top: 20px;
+		}
+	}
+
+
+}

@@ -7,7 +7,7 @@ export default defineConfig({
     rollupOptions: {
       input: {
         main: resolve(__dirname, "index.html"),
-        catalog: resolve(__dirname, "about.html"),
+        about: resolve(__dirname, "about.html"),
       },
       output: {
         assetFileNames: "assets/[name].[ext]",

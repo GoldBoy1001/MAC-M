@@ -117,12 +117,13 @@ $bgBlue: #0066b3;
 	transition: 0.3s;
 	color: #ffffff;
 	background-color: $orange;
+	border: 2px solid #ff8000;
 
 	@media (hover: hover) {
 		&:hover {
 			background-color: #ffffff;
-			outline: 1px solid #111111;
-			color: #111111;
+			border: 2px solid #ff8000;
+			color: #ff8000;
 		}
 	}
 }

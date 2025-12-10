@@ -3,9 +3,8 @@
 
 <head>
 	<meta charset="UTF-8" />
-	<link rel="icon" type="image/svg+xml" href="/vite.svg" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-	<title>MAC-M</title>
+	<title>О компании</title>
 </head>
 
 <body>
@@ -13,29 +12,139 @@
 		<div class="wrapper">
 			<header class="header">
 				<div class="header__body">
-					<a class="header__logo"><img src="./public/logo.jpg" alt="Логотип"></a>
-					<nav class="menu">
-						<ul class="menu__list">
-							<li><a href="/" class="menu__item">О компании</a></li>
-							<li><a href="/" class="menu__item">Оборудование</a></li>
-							<li><a href="/" class="menu__item">В наличии</a></li>
-							<li><a href="/" class="menu__item">Стоимость</a></li>
-							<li><a href="/" class="menu__item">Проекты</a></li>
-							<li><a href="/" class="menu__item">FAQ</a></li>
-							<li><a href="/" class="menu__item">Новости</a></li>
-							<li><a href="/" class="menu__item">Контакты</a></li>
-						</ul>
-					</nav>
-					<div class="header__buttons buttons-header">
-						<a href="tel:88003012311" class="header__phone">8-800-30-123-11</a>
-						<button class="header__request">Оставить заявку</button>
+					<button class="burger" id="burger">
+						<span></span>
+						<span></span>
+						<span></span>
+					</button>
+					<a class="header__logo" href="/"><img src="./public/logo.jpg" alt="Логотип"></a>
+
+					<div id="menu">
+						<nav class="menu">
+							<ul class="menu__list">
+								<li><a href="/MAC-M/about.html" class="menu__item">О компании</a></li>
+								<li><a href="/" class="menu__item">Оборудование</a></li>
+								<li><a href="/" class="menu__item">В наличии</a></li>
+								<li><a href="/" class="menu__item">Стоимость</a></li>
+								<li><a href="/" class="menu__item">Проекты</a></li>
+								<li><a href="/" class="menu__item">FAQ</a></li>
+								<li><a href="/" class="menu__item">Новости</a></li>
+								<li><a href="/" class="menu__item">Контакты</a></li>
+							</ul>
+						</nav>
+						<div class="header__buttons buttons-header">
+							<a href="tel:88003012311" class="buttons-header__phone">8-800-30-123-11</a>
+							<button class="buttons-header__request">Оставить заявку</button>
+						</div>
 					</div>
 				</div>
 			</header>
 			<main class="main">
+				<section class="about-banner">
+					<div class="about-banner__body">
+						<h1>О компании</h1>
+						<div class="about-banner__texts">
+							<p class="about-banner__text">Добро пожаловать на сайт компании МАС-М – эксперта в производстве и
+								установке автоматических механизированных паркингов!</p>
+							<p class="about-banner__text">Компания ООО «Механизированные паркинги» занимается разработкой
+								и производством оборудования <a href="#">автоматизированных парковочных систем</a>,
+								а также подъемно-транспортного оборудования. За годы работы специалистами нашей компании
+								разработаны механизированные
+								паркинги:</p>
+						</div>
+					</div>
 
+
+
+				</section>
+				<section class="about-type">
+					<article class="about-type__body">
+						<section class="about-type__card card-about-type">
+							<span class="card-about-type__num">01</span>
+							<p class="card-about-type__text">Башенного типа
+								(более 30 модификаций)</p>
+						</section>
+						<section class="about-type__card card-about-type">
+							<span class="card-about-type__num">02</span>
+							<p class="card-about-type__text"><span>Роторного\\</span>
+								Пазлового – типов</p>
+						</section>
+						<section class="about-type__card card-about-type">
+							<span class="card-about-type__num">03</span>
+							<p class="card-about-type__text">Стеллажного типа</p>
+						</section>
+						<section class="about-type__card card-about-type">
+							<span class="card-about-type__num">04</span>
+							<p class="card-about-type__text">Подъемные платформы</p>
+						</section>
+						<section class="about-type__card card-about-type card-about-type-last">
+							<span class="card-about-type__num">05</span>
+							<p class="card-about-type__text">Вспомогательные устройства</p>
+						</section>
+					</article>
+				</section>
+				<section class="about-certificate">
+					<div class="about-certificate__body">
+						<p class="about-certificate__text">Производство оборудования механизированных паркингов размещается на
+							российских предприятиях. В составе оборудования
+							минимальный набор комплектующих иностранного производства. Благодаря этому стоимость оборудования
+							на
+							рынке
+							механизированных паркингов России ниже корейских и немецких аналогов.</p>
+						<a class="about-certificate__btn" href="#">Скачать сертификат</a>
+					</div>
+				</section>
 			</main>
-			<footer class="footer">footer</footer>
+			<footer class="footer">
+				<div class="footer__top top-footer">
+					<div class="top-footer__body">
+						<div class="top-footer__column column-footer-logo">
+							<img class="column-footer-logo__logo" src="./public/svg/1 1.svg" alt="Логотип">
+							<div class="column-footer-logo__bottom">
+								<div class="top-footer__column-title top-footer__column-title-profile">Проверенная компания
+								</div>
+								<img class="column-footer-logo__profile" src="./public/svg/approved_dark_bg 1.svg"
+									alt="Rusprofile">
+							</div>
+						</div>
+						<div class="top-footer__column column-footer-menu ">
+							<div class="top-footer__column-title">Меню</div>
+							<ul class="column-footer-menu__list">
+								<li><a href="/" class="column-footer-menu__item">О компании</a></li>
+								<li><a href="/" class="column-footer-menu__item">Оборудование</a></li>
+								<li><a href="/" class="column-footer-menu__item">В наличии</a></li>
+								<li><a href="/" class="column-footer-menu__item">Стоимость</a></li>
+								<li><a href="/" class="column-footer-menu__item">Проекты</a></li>
+								<li><a href="/" class="column-footer-menu__item">FAQ</a></li>
+								<li><a href="/" class="column-footer-menu__item">Новости</a></li>
+							</ul>
+						</div>
+						<div class="top-footer__column column-footer-contacts">
+							<div class="top-footer__column-title">Контакты</div>
+							<p class="column-footer-contacts__text">191180, Санкт-Петербург Набережная реки Фонтанки ул., д.59
+							</p>
+							<p class="column-footer-contacts__text">125362, г.Москва, ул. Свободы, д. 35 стр. 14</p>
+							<p class="column-footer-contacts__text">Республика Карелия, город Петрозаводск, улица Лизы
+								Чайкиной, дом 14, корпус 1, офис 3.</p>
+						</div>
+						<div class="top-footer__column column-footer-soсial">
+							<div class="top-footer__column-title">Социальные сети</div>
+							<p class="column-footer-soсial__text">+7 (800) 301-23-11 <span>ежедневно с 9:00 до 21:00</span></p>
+							<a href="mailto:info@mac-m.ru" class="column-footer-soсial__text">info@mac-m.ru</a>
+							<a href="/" class="column-footer-soсial__text"><img src="./public/svg/fa7-brands_vk.svg"
+									alt="VK"></a>
+						</div>
+					</div>
+
+				</div>
+				<div class="footer__bottom bottom-footer">
+					<div class="bottom-footer__body">
+						<p class="bottom-footer__text"><a href="">Политика обработки персональных данных</a></p>
+						<p class="bottom-footer__text">© 2025, МАС-М «Механизированные паркинги». Сделано в России</p>
+						<p class="bottom-footer__text bottom-footer__text-design">Дизайн, разработка</p>
+					</div>
+				</div>
+			</footer>
 		</div>
 	</div>
 	<script type="module" src="/src/main.js"></script>

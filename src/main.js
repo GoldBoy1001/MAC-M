@@ -17,9 +17,12 @@ document.addEventListener("DOMContentLoaded", () => {
   Burger();
   window.addEventListener("scroll", () => {
     const gear = document.getElementById("gear-group");
-    const rotation = window.scrollY * 0.3; // скорость вращения
-    gear.style.transform = `rotate(${rotation}deg)`;
+    if (gear) {
+      const rotation = window.scrollY * 0.3; // скорость вращения
+      gear.style.transform = `rotate(${rotation}deg)`;
+    }
   });
+
   ScrollGears();
   const swiperIndex = new Swiper(".swiper-index", {
     modules: [Navigation],
