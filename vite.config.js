@@ -8,6 +8,7 @@ export default defineConfig({
       input: {
         main: resolve(__dirname, "index.html"),
         about: resolve(__dirname, "about.html"),
+        catalog: resolve(__dirname, "catalog.html"),
       },
       output: {
         assetFileNames: "assets/[name].[ext]",

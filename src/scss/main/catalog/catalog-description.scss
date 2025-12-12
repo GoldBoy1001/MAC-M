@@ -1,0 +1,36 @@
+.catalog-description {
+	@extend %grid;
+	padding: clamp(3.625rem, 2.8092rem + 4.0789vw, 7.5rem) clamp(1.25rem, 0.9868rem + 1.3158vw, 2.5rem) 50px;
+
+	&__body {
+		grid-column: 2/3;
+
+		h1 {
+			font-size: clamp(1.5rem, 0.6974rem + 4.0132vw, 5.3125rem);
+			margin-bottom: 40px;
+
+			@media (max-width: 768px) {
+				font-size: 32px;
+			}
+
+			@media (max-width: 480px) {
+				margin-bottom: 30px;
+				font-size: 24px;
+			}
+		}
+	}
+
+	&__text {
+		@extend %text;
+		max-width: 1375px;
+		text-align: unset;
+	}
+
+	&__text+&__text {
+		margin-top: 30px;
+
+		@media (max-width: 1024px) {
+			margin-top: 20px;
+		}
+	}
+}
