@@ -4,19 +4,60 @@
 
 	&__body {
 		grid-column: 2/3;
-		display: grid;
 		display: flex;
-		align-items: center;
-		justify-content: center;
+		align-items: start;
+		justify-content: space-between;
+		column-gap: 40px;
+
+		@media (max-width: 1024px) {
+			flex-direction: column;
+			column-gap: 0px;
+			row-gap: 20px;
+		}
+
+		.about-banner__texts {
+			flex: 1 1 100%;
+			padding-top: 0px;
+		}
 	}
 
 	&__text {
 		@extend %text;
+		max-width: 1029px;
+		text-align: justify;
+
+		@media (max-width: 480px) {
+			margin-top: 10px;
+		}
+
 	}
 
 	&__btn {
 
-		@extend %btnOrange;
 
+		padding: clamp(0.625rem, 0.4013rem + 1.1184vw, 1.6875rem) 40px;
+		cursor: pointer;
+		transition: 0.3s;
+		color: #ffffff;
+		background-color: $orange;
+		border: 2px solid #ff8000;
+		border-radius: 50px;
+		min-width: 445px;
+		text-align: center;
+		//width: 100%;
+		box-sizing: border-box;
+		font-size: clamp(1rem, 0.8947rem + 0.5263vw, 1.5rem);
+
+		@media (hover: hover) {
+			&:hover {
+				background-color: #ffffff;
+				border: 2px solid #ff8000;
+				color: #ff8000;
+			}
+		}
+
+		@media (max-width: 1024px) {
+			width: 100%;
+		}
 	}
 }

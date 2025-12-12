@@ -9,11 +9,13 @@ import "normalize.css";
 import "./style.scss";
 
 import { Burger } from "./js/burger";
-import { ScrollGears } from "./js/scrollGears,js";
+import { ScrollGears } from "./js/scrollGears.js";
+import { moveTexts } from "./js/moveTexts.js";
 
 // ===================================================================
 
 document.addEventListener("DOMContentLoaded", () => {
+  moveTexts();
   Burger();
   window.addEventListener("scroll", () => {
     const gear = document.getElementById("gear-group");

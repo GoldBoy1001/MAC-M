@@ -1,0 +1,45 @@
+.about-advantages {
+	padding: clamp(3.125rem, 2.4671rem + 3.2895vw, 6.25rem) 0px;
+
+	&__wrapper {
+		@extend %grid;
+		padding: clamp(1.25rem, 0.9868rem + 1.3158vw, 2.5rem);
+		background-color: $bgBlue;
+	}
+
+	&__body {
+		grid-column: 2/3;
+		color: #ffffff;
+		display: grid;
+		grid-template: auto / repeat(2, 1fr);
+		column-gap: clamp(1.25rem, -5.0245rem + 9.8039vw, 6.25rem);
+		row-gap: 50px;
+
+		@media (max-width: 1024px) {
+			grid-template: auto / 1fr;
+			row-gap: clamp(1.25rem, 0.6818rem + 2.8409vw, 2.5rem);
+		}
+
+		h2 {
+			margin-bottom: 0px;
+		}
+	}
+
+	&__card {}
+}
+
+.card-about-advantages {
+	display: flex;
+	flex-direction: column;
+
+	&__img {
+		width: 30px;
+		height: 100%;
+		max-height: 42px;
+	}
+
+	&__text {
+		@extend %text;
+		margin-top: 10px;
+	}
+}

@@ -18,6 +18,9 @@
 		background: url("../../../../public/images/Banner-about-mobile.jpg") 0 0 / 100% 100% no-repeat !important;
 	}
 
+
+
+
 	@media (max-width: 768px) {
 		height: clamp(30.1875rem, 5.4554rem + 123.6607vw, 64.8125rem) !important;
 	}
@@ -57,9 +60,7 @@
 			padding-top: 0px;
 		}
 
-		@media (max-width: 480px) {
-			display: none;
-		}
+
 	}
 
 	&__text {
