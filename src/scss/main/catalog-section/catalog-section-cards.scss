@@ -18,12 +18,12 @@
 		}
 
 		@media (max-width: 1024px) {
-			column-gap: 0px;
+
 			row-gap: 30px;
 		}
 
 		@media (max-width: 480px) {
-
+			grid-template: auto/ 1fr !important;
 			row-gap: 80px;
 		}
 	}
