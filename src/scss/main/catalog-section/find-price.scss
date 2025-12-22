@@ -2,18 +2,28 @@
 	@extend %grid;
 	@extend %paddingSection;
 
+	box-sizing: border-box;
 
 	&__body {
 		grid-column: 2/3;
 		box-shadow:
 			0 15px 100px 0 rgba(0, 102, 179, 0.2),
 			0 -15px 100px 0 rgba(0, 102, 179, 0.2);
-		padding: 35px 155px 80px;
+		padding: clamp(0.9375rem, 0.6743rem + 1.3158vw, 2.1875rem) clamp(1.875rem, -7.9289rem + 15.3186vw, 9.6875rem) clamp(1.875rem, 1.2171rem + 3.2895vw, 5rem);
+
+		@media (max-width: 480px) {
+			padding: 15px 15px 30px;
+		}
 	}
 
 	&__title {
 		color: $orange;
 		margin-bottom: 40px;
+
+		@media (max-width: 1024px) {
+			text-align: center;
+
+		}
 	}
 }
 
@@ -21,8 +31,13 @@
 	&__grid {
 		display: grid;
 		grid-template-columns: repeat(3, 1fr);
-		column-gap: 90px;
-		row-gap: 60px;
+		column-gap: clamp(1.25rem, -14.5rem + 17.5vw, 5.625rem);
+		row-gap: clamp(1.875rem, 1.4803rem + 1.9737vw, 3.75rem);
+
+		@media (max-width: 1120px) {
+			column-gap: 40px;
+
+		}
 	}
 
 	&__col {
@@ -37,6 +52,16 @@
 			display: flex;
 			flex-direction: column;
 			row-gap: 30px;
+
+			@media (max-width: 1120px) {
+				grid-column: 1/4;
+				grid-row: 1/2;
+			}
+
+			@media (max-width: 800px) {
+				grid-column: 1/-1 !important;
+				grid-row: 1/2 !important;
+			}
 		}
 
 		&--2 {
@@ -45,27 +70,62 @@
 			display: flex;
 			flex-direction: column;
 			justify-content: space-between;
+
+			@media (max-width: 1120px) {
+				grid-column: 4/6;
+				grid-row: 1/2;
+			}
+
+			@media (max-width: 800px) {
+				grid-column: 1/-1 !important;
+				grid-row: 3/4 !important;
+			}
 		}
 
 		&--3 {
 			grid-column: 3/4;
-			grid-row: 1/2;
+			grid-row: 1/3;
+
+			@media (max-width: 1120px) {
+				grid-column: 1/6;
+				grid-row: 3/4;
+			}
+
+			@media (max-width: 800px) {
+				grid-column: 1/-1 !important;
+				grid-row: 5/6 !important;
+			}
 		}
 
 		&--4 {
 			grid-column: 1/2;
 			grid-row: 2/3;
+
+			@media (max-width: 1120px) {
+				grid-column: 1/4;
+			}
+
+			@media (max-width: 800px) {
+				grid-column: 1/-1 !important;
+				grid-row: 2/3 !important;
+			}
 		}
 
 		&--5 {
 			grid-column: 2/3;
 			grid-row: 2/3;
+
+			@media (max-width: 1120px) {
+				grid-column: 4/6;
+			}
+
+			@media (max-width: 800px) {
+				grid-column: 1/-1 !important;
+				grid-row: 4/5 !important;
+			}
 		}
 
-		&--6 {
-			grid-column: 3/4;
-			grid-row: 2/3;
-		}
+
 
 
 	}
@@ -73,13 +133,18 @@
 	&__field {
 		display: flex;
 		flex-direction: column;
-		gap: 10px;
 	}
 
 	&__label {
-		font-size: 20px;
+		font-size: clamp(0.875rem, 0.7961rem + 0.3947vw, 1.25rem);
 		margin-bottom: 10px;
 		color: #222222;
+
+		@media (max-width: 1024px) {
+			margin-bottom: 5px;
+
+		}
+
 	}
 
 	&__input,
@@ -87,9 +152,12 @@
 		border: 1px solid $bgBlue;
 		border-radius: 50px;
 		padding: 16px 32px;
-		font-size: 24px;
+		font-size: clamp(1rem, 0.8947rem + 0.5263vw, 1.5rem);
 		outline: none;
 
+		@media (max-width: 480px) {
+			padding: 15px 20px;
+		}
 
 		&:focus {
 			box-shadow:
@@ -100,7 +168,8 @@
 
 	&__textarea {
 		resize: none;
-		min-height: 120px;
+		min-height: clamp(5.375rem, 4.3487rem + 5.1316vw, 10.25rem);
+		padding: 20px 32px;
 	}
 
 	&__radio-group {
@@ -108,8 +177,12 @@
 		flex-direction: column;
 		gap: 20px;
 
+		@media (max-width: 480px) {
+			gap: 10px;
+		}
+
 		label {
-			font-size: 24px;
+			font-size: clamp(1rem, 0.8947rem + 0.5263vw, 1.5rem);
 			cursor: pointer;
 			display: flex;
 			align-items: center;
@@ -133,9 +206,13 @@
 		color: #fff;
 		border: none;
 		border-radius: 24px;
-		padding: 14px;
-		font-size: 16px;
+		padding: clamp(0.625rem, 0.5724rem + 0.2632vw, 0.875rem);
+		font-size: clamp(0.75rem, 0.6974rem + 0.2632vw, 1rem);
 		cursor: pointer;
+
+		@media (max-width: 480px) {
+			margin: 20px 0px;
+		}
 
 		&:hover {
 			background: #155db0;
@@ -143,9 +220,10 @@
 	}
 
 	&__policy {
-		font-size: 20px;
+		font-size: clamp(0.75rem, 0.6447rem + 0.5263vw, 1.25rem);
 		color: #222222;
 		line-height: 110%;
+		flex: 1 1 auto;
 
 		a {
 			color: $orange;
@@ -175,7 +253,7 @@
 }
 
 .form-find-price__label-big {
-	font-size: 24px;
+	font-size: clamp(1.25rem, 1.1974rem + 0.2632vw, 1.5rem);
 }
 
 .form-find-price__range {
@@ -200,67 +278,117 @@
 
 .form-find-price__range::-webkit-slider-thumb {
 	-webkit-appearance: none;
-	width: 24px;
-	height: 24px;
+	width: 19px;
+	height: 19px;
 	background: $bgBlue;
 	/* цвет ползунка */
 	border-radius: 50%;
+	transform: scale(1.3);
 	/* выравнивание по центру */
 }
 
 
 .form-find-price__radio-group input[type="radio"] {
 	accent-color: $bgBlue;
-	width: 24px;
-	height: 24px;
+	width: clamp(1.125rem, 1.0461rem + 0.3947vw, 1.5rem);
+	height: clamp(1.125rem, 1.0461rem + 0.3947vw, 1.5rem);
+	cursor: pointer;
 
 }
 
 .form-find-price__label-mt {
-	margin-bottom: 20px;
+	margin-bottom: 30px;
+
+	@media (max-width: 1024px) {
+		margin-bottom: 30px;
+	}
 }
 
 .form-find-price__field-center {}
 
 .form-find-price__range-head-mb {
 	margin-bottom: 65px;
+
+	@media (max-width: 480px) {
+		margin-bottom: 56px;
+	}
 }
 
 .form-find-price__range-body {
 	position: relative;
+
+	@media (max-width: 480px) {
+		padding-left: 5px;
+	}
 }
 
 .form-find-price__value {
 	position: absolute;
 	top: -40px;
 	transform: translateX(-50%);
-	font-size: 16px;
+	font-size: clamp(0.75rem, 0.6974rem + 0.2632vw, 1rem);
 	color: $bgBlue;
 	border: 1px solid $bgBlue;
 	pointer-events: none;
 	white-space: nowrap;
 	padding: 5px;
+
+	@media (max-width: 480px) {
+		transform: translateX(-35%);
+	}
 }
 
 .form-find-price__value-block {
 	margin-top: 20px;
 	display: flex;
 	justify-content: space-between;
+
+	@media (max-width: 480px) {
+		padding-left: 5px;
+	}
 }
 
 .form-find-price__value-start {}
 
 .form-find-price__value-start,
 .form-find-price__value-end {
-	font-size: 20px;
+	font-size: clamp(0.875rem, 0.7961rem + 0.3947vw, 1.25rem);
 }
 
 .form-find-price__field-center {
 	margin-top: 42px;
+
+	@media (max-width: 480px) {
+		margin-top: 30px;
+	}
 }
 
-.form-find-price__field-phone {}
+.form-find-price__field-phone {
+	@media (max-width: 1440px) {
+		margin-top: 30px;
+	}
+}
 
-.form-find-price__field-phone-title {}
+.form-find-price__field-phone-title {
+	margin: 0;
+	font-weight: 600;
+	margin-bottom: 20px;
+	font-size: clamp(1.25rem, 1.0921rem + 0.7895vw, 2rem);
 
-.form-find-price__field-phone-phone {}
+	@media (max-width: 480px) {
+		margin-bottom: 15px;
+	}
+}
+
+.form-find-price__field-phone-phone {
+	color: $bgBlue;
+	font-size: clamp(1rem, 0.8947rem + 0.5263vw, 1.5rem);
+}
+
+.form-find-price__field-phone-phone+.form-find-price__field-phone-phone {
+	margin-top: 15px;
+
+	@media (max-width: 480px) {
+		margin-top: 10px;
+	}
+}
