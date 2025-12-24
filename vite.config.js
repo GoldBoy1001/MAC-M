@@ -10,6 +10,8 @@ export default defineConfig({
         about: resolve(__dirname, "about.html"),
         catalog: resolve(__dirname, "catalog.html"),
         catalogSection: resolve(__dirname, "catalog-section.html"),
+        catalogDetail: resolve(__dirname, "catalog-detail.html"),
+        projects: resolve(__dirname, "projects.html"),
       },
       output: {
         assetFileNames: "assets/[name].[ext]",

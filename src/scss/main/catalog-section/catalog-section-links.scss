@@ -1,32 +1,58 @@
 .catalog-section-links {
-	@extend %grid;
-	@extend %paddingSection;
+  @extend %grid;
+  @extend %paddingSection;
 
-	&__body {
-		grid-column: 2/3;
-		max-width: 1130px;
-		margin: 0 auto;
-	}
+  &__body {
+    grid-column: 2/3;
+    width: clamp(23.3125rem, 4.6211rem + 93.4568vw, 70.625rem);
+    margin: 0 auto;
+  }
 
-	&__text {}
+  &__text {
+    font-size: clamp(1rem, 0.7895rem + 1.0526vw, 2rem);
+    line-height: 110%;
+    margin-bottom: clamp(1.25rem, 0.7237rem + 2.6316vw, 3.75rem);
+    text-align: center;
+  }
 
-	&__card {}
+  &__card {
+    padding: 0px;
+  }
 }
 
-.swiper {}
+.swiper {
+}
 
-.catalog-section-links-swiper {}
+.catalog-section-links-swiper {
+}
 
-.swiper-wrapper {}
+.swiper-wrapper {
+}
 
-.catalog-section-links-wrapper {}
+.catalog-section-links-wrapper {
+}
 
-.swiper-slide {}
+.swiper-slide {
+}
 
-.catalog-section-links-slide {}
+.catalog-section-links-slide {
+}
 
-.card-slide-index {}
+.card-slide-index {
+}
 
-.card-slide-body {}
+.card-slide-body {
+  height: 350px;
+  @media (max-width: 640px) {
+    height: clamp(17.5rem, 16.5789rem + 4.6053vw, 21.875rem);
+  }
+}
 
-.card-index-text {}
+.card-index-text {
+  font-size: clamp(0.875rem, 0.7434rem + 0.6579vw, 1.5rem);
+  margin-top: 15px;
+  margin-bottom: 0;
+  @media (max-width: 480px) {
+    margin-top: 10px;
+  }
+}

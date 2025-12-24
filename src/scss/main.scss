@@ -1,6 +1,5 @@
 .main {
-	grid-area: main;
-
+  grid-area: main;
 }
 
 // ======================  Home ==============================
@@ -36,3 +35,8 @@
 @import "./main/catalog-section/find-price.scss";
 @import "./main/catalog-section/catalog-section-projects.scss";
 @import "./main/catalog-section/catalog-section-links.scss";
+
+// ======================  Catalog-Detail ==============================
+@import "./main/catalog-detail/catalog-detail-head.scss";
+@import "./main/catalog-detail/catalog-detail-descriptions.scss";
+@import "./main/catalog-detail/catalog-detail-lift.scss";

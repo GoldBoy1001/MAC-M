@@ -62,7 +62,6 @@ document.addEventListener("DOMContentLoaded", () => {
     },
   });
   const catalogSectionLinks = new Swiper(".catalog-section-links-swiper", {
-    //modules: [Navigation],
     loop: true,
     slidesPerView: 3,
     spaceBetween: 40,
@@ -72,9 +71,9 @@ document.addEventListener("DOMContentLoaded", () => {
     },
 
     breakpoints: {
-      320: { slidesPerView: 1, spaceBetween: 10 },
-      1024: { slidesPerView: 2, spaceBetween: 20 },
-      1740: { slidesPerView: 3, spaceBetween: 40 },
+      220: { slidesPerView: 1, spaceBetween: 10 },
+      640: { slidesPerView: 2, spaceBetween: 20 },
+      992: { slidesPerView: 3, spaceBetween: 40 },
     },
   });
 });
