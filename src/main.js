@@ -13,10 +13,14 @@ import { ScrollGears } from "./js/scrollGears.js";
 import { moveTexts } from "./js/moveTexts.js";
 import { Tabs } from "./js/tabs.js";
 import { FormFindPrice } from "./js/FormFindPrice.js";
+import { ProjectsTabs } from "./js/ProjectsTabs.js";
+import { MenuActive } from "./js/menuActive.js";
 
 // ===================================================================
 
 document.addEventListener("DOMContentLoaded", () => {
+  MenuActive();
+  ProjectsTabs();
   FormFindPrice();
   Tabs();
   moveTexts();

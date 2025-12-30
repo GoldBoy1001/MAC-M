@@ -1,0 +1,59 @@
+.projects {
+	@extend %grid;
+	padding: clamp(6.6875rem, 5.4338rem + 2.6119vw, 8.4375rem) clamp(1.25rem, 0.9868rem + 1.3158vw, 2.5rem) 0px;
+
+	@media (max-width: 768px) {
+		padding: clamp(5.4375rem, 4.5446rem + 4.4643vw, 6.6875rem) clamp(1.25rem, 0.9868rem + 1.3158vw, 2.5rem) 0px;
+	}
+
+	@media (max-width: 480px) {
+		padding: clamp(5.4375rem, 4.5446rem + 4.4643vw, 6.6875rem) clamp(1.25rem, 0.9868rem + 1.3158vw, 2.5rem) 50px;
+	}
+
+	&__body {
+		grid-column: 2/3;
+	}
+
+	&__title {}
+
+	&__tabs {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 20px;
+
+		@media (max-width: 1280px) {
+			flex-direction: column;
+		}
+
+		@media (max-width: 480px) {
+			gap: 10px;
+		}
+	}
+
+	&__tab {
+
+		padding: clamp(0.625rem, 0.5461rem + 0.3947vw, 1rem) 32px;
+		min-width: 210px;
+		@extend %text;
+		color: $bgBlue;
+		transition: .3s;
+		border: 2px solid $bgBlue;
+		border-radius: 50px;
+
+		display: block;
+		text-align: center;
+		box-sizing: border-box;
+
+
+
+	}
+
+	&__tab-active {
+		color: #ffffff;
+		background-color: $bgBlue;
+	}
+}
+
+.cards-catalog-section-project {
+	margin-top: 0;
+}

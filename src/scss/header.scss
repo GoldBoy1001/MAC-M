@@ -36,7 +36,13 @@
 		}
 	}
 
-	&__item {}
+	&__item {
+		transition: .3s;
+	}
+
+	&__item-active {
+		color: $bgBlue;
+	}
 }
 
 /* Бургер */

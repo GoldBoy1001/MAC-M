@@ -1,5 +1,5 @@
 .main {
-  grid-area: main;
+	grid-area: main;
 }
 
 // ======================  Home ==============================
@@ -40,3 +40,6 @@
 @import "./main/catalog-detail/catalog-detail-head.scss";
 @import "./main/catalog-detail/catalog-detail-descriptions.scss";
 @import "./main/catalog-detail/catalog-detail-lift.scss";
+
+// ======================  Projects ==============================
+@import "./main/projects/projects.scss";
