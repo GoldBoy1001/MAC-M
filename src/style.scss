@@ -2,60 +2,57 @@
 @import "./scss/fonts.scss";
 
 :root {
-	font-family: "Inter", sans-serif;
-	font-optical-sizing: auto;
-	font-weight: 400;
-	font-style: normal;
-	font-size: 16px;
-	letter-spacing: 0;
-	line-height: 110%;
-	color: #222222;
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 16px;
+  letter-spacing: 0;
+  line-height: 110%;
+  color: #222222;
 }
 
 p {
-	margin: 0;
+  margin: 0;
 }
 
 h2,
 h1 {
-	font-family: "HSE Sans", sans-serif;
-	margin: 0;
-	font-weight: 600;
-	line-height: 110%;
-	letter-spacing: -3px;
+  font-family: "HSE Sans", sans-serif;
+  margin: 0;
+  font-weight: 600;
+  line-height: 110%;
+  letter-spacing: -3px;
 }
 
 @media (max-width: 768px) {
-
-	h2,
-	h1 {
-		line-height: 100%;
-		letter-spacing: 0px;
-	}
+  h2,
+  h1 {
+    line-height: 100%;
+    letter-spacing: 0px;
+  }
 }
 
 ul {
-	list-style: none;
-	margin: 0;
-	padding: 0;
-	border-bottom: none;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  border-bottom: none;
 }
 
 a {
-	color: #222222;
-	text-decoration: none;
+  color: #222222;
+  text-decoration: none;
 }
 
 h1 {
-	font-size: clamp(1.5rem, 0.5rem + 5vw, 6.25rem);
+  font-size: clamp(1.5rem, 0.5rem + 5vw, 6.25rem);
 }
 
 h2 {
-	font-size: clamp(1.5rem, 0.6974rem + 4.0132vw, 5.3125rem);
-	margin-bottom: clamp(1.875rem, 1.2171rem + 3.2895vw, 5rem);
+  font-size: clamp(1.5rem, 0.6974rem + 4.0132vw, 5.3125rem);
+  margin-bottom: clamp(1.875rem, 1.2171rem + 3.2895vw, 5rem);
 }
-
-
 
 // =======================================================
 $width: 1840px;
@@ -65,104 +62,108 @@ $orange: #ff8000;
 $bgBlue: #0066b3;
 
 %text {
-	line-height: 110%;
-	font-size: clamp(0.875rem, 0.7434rem + 0.6579vw, 1.5rem);
+  line-height: 110%;
+  font-size: clamp(0.875rem, 0.7434rem + 0.6579vw, 1.5rem);
 }
 
 %btnOrange {
-	display: inline-block;
-	padding: clamp(0.625rem, 0.4013rem + 1.1184vw, 1.6875rem) 40px;
-	box-sizing: border-box;
-	text-align: center;
-	width: 100%;
-	background-color: $orange;
-	color: #ffffff;
-	border-radius: 50px;
-	font-family: 500;
-	font-size: clamp(0.75rem, 0.4868rem + 1.3158vw, 2rem);
-	margin-top: clamp(1.875rem, 1.4803rem + 1.9737vw, 3.75rem);
-	transition: 0.3s;
-	border: 2px solid $orange;
+  display: inline-block;
+  padding: clamp(0.625rem, 0.4013rem + 1.1184vw, 1.6875rem) 40px;
+  box-sizing: border-box;
+  text-align: center;
+  width: 100%;
+  background-color: $orange;
+  color: #ffffff;
+  border-radius: 50px;
+  font-family: 500;
+  font-size: clamp(0.75rem, 0.4868rem + 1.3158vw, 2rem);
+  margin-top: clamp(1.875rem, 1.4803rem + 1.9737vw, 3.75rem);
+  transition: 0.3s;
+  border: 2px solid $orange;
 
-	@media (hover: hover) {
-		&:hover {
-			background: #fff;
-			color: $orange;
-		}
-	}
+  @media (hover: hover) {
+    &:hover {
+      background: #fff;
+      color: $orange;
+    }
+  }
 }
-
+%titleInner {
+  font-size: clamp(1.5rem, 0.6974rem + 4.0132vw, 5.3125rem);
+}
 %textBig {
-	font-size: clamp(1.25rem, 1.0921rem + 0.7895vw, 2rem);
-	margin: 0;
-	line-height: 1;
-	margin-bottom: 20px;
+  font-size: clamp(1.25rem, 1.0921rem + 0.7895vw, 2rem);
+  margin: 0;
+  line-height: 1;
+  margin-bottom: 20px;
 }
 
 %padding {
-	padding: clamp(0.625rem, 0.2303rem + 1.9737vw, 2.5rem) clamp(1.25rem, 0.9868rem + 1.3158vw, 2.5rem);
+  padding: clamp(0.625rem, 0.2303rem + 1.9737vw, 2.5rem)
+    clamp(1.25rem, 0.9868rem + 1.3158vw, 2.5rem);
 }
 
 %grid {
-	display: grid;
-	grid-template: auto / 1fr minmax(auto, $width) 1fr;
-	padding: 90px 40px;
-
+  display: grid;
+  grid-template: auto / 1fr minmax(auto, $width) 1fr;
+  padding: 90px 40px;
 }
 
 %paddingSection {
-	padding: clamp(3.125rem, 2.4671rem + 3.2895vw, 6.25rem) clamp(1.25rem, 0.9868rem + 1.3158vw, 2.5rem);
+  padding: clamp(3.125rem, 2.4671rem + 3.2895vw, 6.25rem)
+    clamp(1.25rem, 0.9868rem + 1.3158vw, 2.5rem);
 }
 
 %btnOrange {
-	font-weight: 500;
-	padding: 27px 40px;
-	cursor: pointer;
-	transition: 0.3s;
-	color: #ffffff;
-	background-color: $orange;
-	border: 2px solid #ff8000;
-	border-radius: 50px;
+  font-weight: 500;
+  padding: 27px 40px;
+  cursor: pointer;
+  transition: 0.3s;
+  color: #ffffff;
+  background-color: $orange;
+  border: 2px solid #ff8000;
+  border-radius: 50px;
 
-	@media (hover: hover) {
-		&:hover {
-			background-color: #ffffff;
-			border: 2px solid #ff8000;
-			color: #ff8000;
-		}
-	}
+  @media (hover: hover) {
+    &:hover {
+      background-color: #ffffff;
+      border: 2px solid #ff8000;
+      color: #ff8000;
+    }
+  }
 }
 
 // =======================================================
 
 body {
-	font-size: 24px;
+  font-size: 24px;
 }
 
 .wrapper {
-	min-height: 100vh;
-	display: grid;
-	grid-template:
-		minmax(clamp(4rem, 2.9474rem + 5.2632vw, 9rem), auto) 1fr minmax(523px,
-			auto
-		) / 1fr;
-	grid-template-areas:
-		"header"
-		"main"
-		"footer";
+  min-height: 100vh;
+  display: grid;
+  grid-template:
+    minmax(clamp(4rem, 2.9474rem + 5.2632vw, 9rem), auto) 1fr minmax(
+      523px,
+      auto
+    )
+    / 1fr;
+  grid-template-areas:
+    "header"
+    "main"
+    "footer";
 }
 
 @media (max-width: 1900px) {
-	.active-menu {
-		transition: 0.5s;
-		background-color: hsl(0, 0%, 0%, 0.6);
-		z-index: 1001;
-	}
+  .active-menu {
+    transition: 0.5s;
+    background-color: hsl(0, 0%, 0%, 0.6);
+    z-index: 1001;
+  }
 
-	body.active-menu {
-		overflow: hidden;
-
-	}
+  body.active-menu {
+    overflow: hidden;
+  }
 }
 
 @import "./scss/header.scss";
