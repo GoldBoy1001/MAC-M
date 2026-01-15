@@ -1,0 +1,131 @@
+.contacts-regions {
+	max-width: 1481px;
+	margin: -180px auto 0 auto;
+	position: relative;
+	z-index: 1000;
+	padding: 0px clamp(1.25rem, 0.9868rem + 1.3158vw, 2.5rem);
+
+	@media (max-width: 1024px) {
+		margin: 0px auto 0 auto;
+	}
+
+	@media (max-width: 480px) {
+		margin: -30px auto 0 auto;
+	}
+
+	&__cards {
+		display: grid;
+		grid-template: auto / repeat(3, 1fr);
+		column-gap: 40px;
+
+		@media (max-width: 1024px) {
+			grid-template: auto / 1fr;
+			row-gap: 30px;
+		}
+	}
+
+	&__card {}
+
+	&__text {
+		margin-top: 50px;
+		text-align: center;
+		font-size: clamp(0.875rem, 0.5855rem + 1.4474vw, 2.25rem);
+
+		@media (max-width: 480px) {
+			margin-top: 40px;
+		}
+	}
+}
+
+.card-contacts-regions {
+	box-shadow: 0px 20px 80px 0px #0066B333;
+	display: flex;
+	flex-direction: column;
+	padding: 20px;
+	border-radius: 10px;
+	background-color: #fff;
+
+	@media (max-width: 480px) {
+		padding: 15px;
+	}
+
+	&__region {
+		display: inline-block;
+		@extend %text;
+		color: #fff;
+		background-color: $bgBlue;
+
+		@media (max-width: 480px) {
+			font-size: 16px;
+		}
+	}
+
+	&__region-body {
+		display: flex;
+		flex-direction: column;
+
+		@media (max-width: 1024px) {
+			flex-direction: row;
+			gap: 20px;
+			flex-wrap: wrap;
+		}
+	}
+
+	&__tel {
+		@extend %text;
+		color: $bgBlue;
+		margin-top: 20px;
+		transition: .3s;
+
+		@media (max-width: 1024px) {
+			margin-top: 0;
+		}
+
+		@media (max-width: 480px) {
+			font-size: 16px;
+		}
+	}
+
+	&__tel,
+	&__region {
+		border: 1px solid $bgBlue;
+		justify-self: start;
+		align-self: start;
+		border-radius: 50px;
+		padding: 19px 32px;
+
+		@media (max-width: 1024px) {
+			text-align: center;
+			padding: 15px 50px;
+			flex: 0 1 25%;
+
+		}
+
+		@media (max-width: 740px) {
+			flex: 1 1 30%;
+		}
+
+		@media (max-width: 480px) {
+			padding: 10px 50px;
+		}
+	}
+
+	&__adress {
+		margin-top: 60px;
+
+		@media (max-width: 768px) {
+			margin-top: 40px !important;
+		}
+
+		@media (max-width: 480px) {
+			margin-top: 30px !important;
+		}
+	}
+}
+
+@media (hover: hover) {
+	.card-contacts-regions__tel:hover {
+		color: #fff;
+		background-color: $bgBlue;
+	}
+}

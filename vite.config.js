@@ -17,6 +17,8 @@ export default defineConfig({
         newsDetail: resolve(__dirname, "news-detail.html"),
         articles: resolve(__dirname, "articles.html"),
         articlesDetail: resolve(__dirname, "articles-detail.html"),
+        faq: resolve(__dirname, "faq.html"),
+        contacts: resolve(__dirname, "contacts.html"),
       },
       output: {
         assetFileNames: "assets/[name].[ext]",
