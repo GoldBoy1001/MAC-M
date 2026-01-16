@@ -1,5 +1,5 @@
 .main {
-	grid-area: main;
+  grid-area: main;
 }
 
 // ======================  Home ==============================
@@ -61,3 +61,6 @@
 // ======================  Contacts ==============================
 @import "./main/contacts/contacts.scss";
 @import "./main/contacts/contacts-region.scss";
+
+// ======================  Price ==============================
+@import "./main/price/price.scss";

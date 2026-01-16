@@ -19,6 +19,7 @@ export default defineConfig({
         articlesDetail: resolve(__dirname, "articles-detail.html"),
         faq: resolve(__dirname, "faq.html"),
         contacts: resolve(__dirname, "contacts.html"),
+        price: resolve(__dirname, "price.html"),
       },
       output: {
         assetFileNames: "assets/[name].[ext]",
