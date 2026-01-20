@@ -1,0 +1,127 @@
+.request {
+  padding: clamp(3.125rem, 2.4671rem + 3.2895vw, 6.25rem)
+    clamp(1.25rem, 0.9868rem + 1.3158vw, 2.5rem);
+  &__body {
+    max-width: 1220px;
+    margin: 0 auto;
+    padding: clamp(1.25rem, 0.9868rem + 1.3158vw, 2.5rem)
+      clamp(1.25rem, 0.9868rem + 1.3158vw, 2.5rem)
+      clamp(1.25rem, 0.9868rem + 1.3158vw, 2.5rem)
+      clamp(1.25rem, 0.9868rem + 1.3158vw, 2.5rem);
+    box-shadow: 15px 15px 70px 0px #0066b333, -15px -15px 70px 0px #0066b333;
+    border-radius: clamp(0.9375rem, 0.477rem + 2.3026vw, 3.125rem);
+    background-color: #fff;
+  }
+}
+
+// Блок формы
+.request-form {
+  display: grid;
+  grid-template: auto / repeat(2, 1fr);
+  column-gap: clamp(1.25rem, -1.6604rem + 6.0634vw, 5.3125rem);
+  @media (max-width: 1024px) {
+    grid-template: auto / repeat(12, 1fr);
+  }
+  &__field_name {
+    grid-column: 1/2;
+    grid-row: 1/2;
+    @media (max-width: 1024px) {
+      grid-column: 1/9;
+    }
+    @media (max-width: 720px) {
+      grid-column: 1/13;
+    }
+  }
+  &__field_tel {
+    grid-column: 1/2;
+    grid-row: 2/3;
+    @media (max-width: 1024px) {
+      grid-column: 1/9;
+    }
+    @media (max-width: 720px) {
+      grid-column: 1/13;
+    }
+  }
+  &__field_mail {
+    grid-column: 1/2;
+    grid-row: 3/4;
+    @media (max-width: 1024px) {
+      grid-column: 1/13;
+    }
+  }
+  &__field {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  &__label {
+    @extend %text;
+    margin-bottom: 10px;
+    @media (max-width: 480px) {
+      margin-bottom: 5px;
+    }
+  }
+
+  &__input {
+    padding: 16px 32px;
+    border: 1px solid $color;
+    border-radius: 50px;
+    @extend %text;
+    transition: border 0.2s;
+    margin-bottom: 20px;
+    &:focus {
+      outline: none;
+      border-color: #0066b3;
+    }
+    @media (max-width: 480px) {
+      padding: 15px 20px;
+    }
+  }
+
+  &__actions {
+    margin-top: 30px;
+    grid-column: 1/2;
+    grid-row: 4/5;
+    @media (max-width: 1024px) {
+      grid-column: 1/13;
+    }
+    @media (max-width: 720px) {
+      grid-row: 5/6;
+    }
+  }
+
+  &__submit {
+    padding: clamp(0.625rem, 0.5066rem + 0.5921vw, 1.1875rem) 32px;
+    border: 2px solid $bgBlue;
+    border-radius: 6px;
+    background: #0066b3;
+    color: #fff;
+    cursor: pointer;
+    border-radius: 50px;
+    transition: background 0.2s;
+    width: 100%;
+    margin-bottom: 20px;
+    @extend %text;
+    @media (max-width: 1024px) {
+      margin-bottom: 0px;
+    }
+    &:hover {
+      background: darken(#0066b3, 5%);
+    }
+  }
+}
+.request-form__img {
+  grid-column: 2/3;
+  grid-row: 1/5;
+  justify-self: center;
+  max-width: clamp(12.3125rem, 6.7155rem + 11.6604vw, 20.125rem);
+  @media (max-width: 1024px) {
+    grid-row: 1/3;
+    grid-column: 9/13;
+  }
+  @media (max-width: 720px) {
+    grid-column: 1/13;
+    grid-row: 4/5;
+  }
+}

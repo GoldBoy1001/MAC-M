@@ -20,6 +20,7 @@ export default defineConfig({
         faq: resolve(__dirname, "faq.html"),
         contacts: resolve(__dirname, "contacts.html"),
         price: resolve(__dirname, "price.html"),
+        gotovoeOborudovanie: resolve(__dirname, "gotovoe-oborudovanie.html"),
       },
       output: {
         assetFileNames: "assets/[name].[ext]",
