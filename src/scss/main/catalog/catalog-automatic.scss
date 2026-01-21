@@ -1,11 +1,12 @@
 .catalog-automatic {
-  // .catalog-automatic__text
-  @extend %grid;
-  padding: 0px clamp(1.25rem, 0.9868rem + 1.3158vw, 2.5rem);
-  &__text {
-    grid-column: 2/3;
-    @extend %text;
-    max-width: 1303px;
-    text-align: justify;
-  }
+	// .catalog-automatic__text
+	@extend %grid;
+	padding: 0px clamp(1.25rem, 0.9868rem + 1.3158vw, 2.5rem) clamp(3.625rem, 2.8092rem + 4.0789vw, 7.5rem) clamp(1.25rem, 0.9868rem + 1.3158vw, 2.5rem);
+
+	&__text {
+		grid-column: 2/3;
+		@extend %text;
+		max-width: 1303px;
+		text-align: justify;
+	}
 }

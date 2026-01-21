@@ -1,6 +1,7 @@
 .catalog-section-links {
 	@extend %grid;
 	@extend %paddingSection;
+	overflow: hidden;
 
 	&__body {
 		grid-column: 2/3;

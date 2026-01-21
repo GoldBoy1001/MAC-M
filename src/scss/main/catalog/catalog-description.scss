@@ -24,6 +24,10 @@
 		@extend %text;
 		max-width: 1375px;
 		text-align: unset;
+
+		@media (max-width: 1024px) {
+			text-align: justify;
+		}
 	}
 
 	&__text+&__text {

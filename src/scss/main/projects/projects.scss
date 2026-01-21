@@ -14,7 +14,10 @@
 		grid-column: 2/3;
 	}
 
-	&__title {}
+	&__title {
+		font-size: clamp(1.5rem, 0.6974rem + 4.0132vw, 5.3125rem);
+		margin-bottom: clamp(1.875rem, 1.2171rem + 3.2895vw, 5rem);
+	}
 
 	&__tabs {
 		display: flex;
