@@ -45,7 +45,7 @@ document.addEventListener("DOMContentLoaded", () => {
     },
     breakpoints: {
       320: { slidesPerView: 1, spaceBetween: 10 },
-      1024: { slidesPerView: 2, spaceBetween: 2 },
+      768: { slidesPerView: 2, spaceBetween: 2 },
       1740: { slidesPerView: 3, spaceBetween: 40 },
     },
   });
@@ -61,7 +61,7 @@ document.addEventListener("DOMContentLoaded", () => {
     },
     breakpoints: {
       320: { slidesPerView: 1, spaceBetween: 10 },
-      1024: { slidesPerView: 2, spaceBetween: 20 },
+      740: { slidesPerView: 2, spaceBetween: 20 },
       1740: { slidesPerView: 3, spaceBetween: 40 },
     },
   });

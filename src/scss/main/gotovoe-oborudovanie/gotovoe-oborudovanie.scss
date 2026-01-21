@@ -1,81 +1,76 @@
 .gotovoe-oborudovanie {
-  // .gotovoe-oborudovanie__body
-  padding: clamp(4.25rem, 3.3684rem + 4.4079vw, 8.4375rem)
-    clamp(1.25rem, 0.9868rem + 1.3158vw, 2.5rem)
-    clamp(3.125rem, 2.4671rem + 3.2895vw, 6.25rem);
+	// .gotovoe-oborudovanie__body
+	padding: clamp(4.25rem, 3.3684rem + 4.4079vw, 8.4375rem) clamp(1.25rem, 0.9868rem + 1.3158vw, 2.5rem) clamp(3.125rem, 2.4671rem + 3.2895vw, 6.25rem);
 
-  &__body {
-  }
 
-  // .gotovoe-oborudovanie__cards
+	&__body {}
 
-  &__cards {
-    @media (max-width: 480px) {
-      margin-top: 80px;
-    }
-  }
 
-  // .gotovoe-oborudovanie__wrapper
+	// .gotovoe-oborudovanie__cards
 
-  &__wrapper {
-  }
+	&__cards {
+		@media (max-width: 480px) {
+			margin-top: 80px;
+		}
+	}
 
-  // .gotovoe-oborudovanie__card
+	// .gotovoe-oborudovanie__wrapper
 
-  &__card {
-  }
+	&__wrapper {}
 
-  // .gotovoe-oborudovanie__link
+	// .gotovoe-oborudovanie__card
 
-  &__link {
-  }
+	&__card {}
 
-  // .gotovoe-oborudovanie__img
+	// .gotovoe-oborudovanie__link
 
-  &__img {
-  }
+	&__link {}
 
-  // .gotovoe-oborudovanie__btn
+	// .gotovoe-oborudovanie__img
 
-  &__btn {
-  }
+	&__img {}
 
-  // .gotovoe-oborudovanie__col
+	// .gotovoe-oborudovanie__btn
 
-  &__col {
-    height: 90px;
-    @media (max-width: 768px) {
-      height: clamp(2.1875rem, -0.2679rem + 12.2768vw, 5.625rem);
-    }
-  }
+	&__btn {}
 
-  // .gotovoe-oborudovanie__btn-bottom
+	// .gotovoe-oborudovanie__col
 
-  &__btn-bottom {
-    display: inline-block;
-    padding: clamp(0.625rem, 0.4013rem + 1.1184vw, 1.6875rem) 40px;
-    box-sizing: border-box;
-    text-align: center;
-    width: 100%;
-    background-color: $bgBlue;
-    color: #ffffff;
-    border-radius: 50px;
-    font-family: 500;
-    font-size: clamp(0.75rem, 0.4868rem + 1.3158vw, 2rem);
-    margin-top: 30px;
-    transition: 0.3s;
-    border: 2px solid $bgBlue;
+	&__col {
+		height: 90px;
 
-    @media (hover: hover) {
-      &:hover {
-        background: #fff;
-        color: $bgBlue;
-      }
-    }
-  }
+		@media (max-width: 768px) {
+			height: clamp(2.1875rem, -0.2679rem + 12.2768vw, 5.625rem);
+		}
+	}
+
+	// .gotovoe-oborudovanie__btn-bottom
+
+	&__btn-bottom {
+		display: inline-block;
+		padding: clamp(0.625rem, 0.4013rem + 1.1184vw, 1.6875rem) 40px;
+		box-sizing: border-box;
+		text-align: center;
+		width: 100%;
+		background-color: $bgBlue;
+		color: #ffffff;
+		border-radius: 50px;
+		font-family: 500;
+		font-size: clamp(0.75rem, 0.4868rem + 1.3158vw, 2rem);
+		margin-top: 30px;
+		transition: 0.3s;
+		border: 2px solid $bgBlue;
+
+		@media (hover: hover) {
+			&:hover {
+				background: #fff;
+				color: $bgBlue;
+			}
+		}
+	}
 }
 
 .gotovoe-oborudovanie__title {
-  font-size: clamp(1.5rem, 0.6974rem + 4.0132vw, 5.3125rem);
-  margin-bottom: clamp(1.875rem, 1.2171rem + 3.2895vw, 5rem);
+	font-size: clamp(1.5rem, 0.6974rem + 4.0132vw, 5.3125rem);
+	margin-bottom: clamp(1.875rem, 1.2171rem + 3.2895vw, 5rem);
 }

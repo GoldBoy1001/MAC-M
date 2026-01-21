@@ -41,7 +41,11 @@
 	}
 
 	// .left-bim__text
-	&__text {}
+	&__text {
+		@media (max-width: 480px) {
+			text-align: justify;
+		}
+	}
 
 	&__text+&__text {
 		margin-top: clamp(1.25rem, 0.9868rem + 1.3158vw, 2.5rem);

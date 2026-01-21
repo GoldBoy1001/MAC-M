@@ -1,6 +1,10 @@
 .about-advantages {
 	padding: clamp(3.125rem, 2.4671rem + 3.2895vw, 6.25rem) 0px;
 
+	@media (max-width: 768px) {
+		padding: clamp(3.125rem, 2.4671rem + 3.2895vw, 6.25rem) 0px 0px 0px;
+	}
+
 	&__wrapper {
 		@extend %grid;
 		padding: clamp(1.25rem, 0.9868rem + 1.3158vw, 2.5rem);

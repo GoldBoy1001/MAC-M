@@ -26,8 +26,12 @@
 	max-width: 80%;
 	height: clamp(20.375rem, 16.9671rem + 17.0395vw, 36.5625rem);
 
+	@media (max-width: 767px) {
+		max-width: 50%;
+	}
+
 	@media (max-width: 480px) {
-		max-width: 100%;
+		max-width: 100% !important;
 	}
 }
 
@@ -89,6 +93,10 @@
 	background: $orange;
 	color: #ffffff;
 	border: 1px solid $orange;
+
+	@media (max-width: 1440px) {
+		margin-top: 15px;
+	}
 
 	@media (hover: hover) {
 		&:hover {

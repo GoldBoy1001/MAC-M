@@ -2,6 +2,7 @@
 	@extend %grid;
 	@extend %paddingSection;
 
+
 	&__body {
 		grid-column: 2/3;
 		display: flex;
@@ -59,6 +60,7 @@
 		}
 
 		@media (max-width: 1024px) {
+			min-width: 105px;
 			width: 100%;
 		}
 	}
